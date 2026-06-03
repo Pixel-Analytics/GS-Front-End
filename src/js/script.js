@@ -19,3 +19,11 @@ document.getElementById('theme-light').addEventListener('click', () => {
 const hamburger = document.getElementById('hamburger');
 const navMenu   = document.getElementById('nav-menu');
 const overlay   = document.getElementById('nav-overlay');
+
+const openMenu = () => {
+    hamburger.classList.add('active');
+    navMenu.classList.add('open');
+    overlay.classList.add('active');
+    hamburger.setAttribute('aria-expanded', 'true');
+    document.body.style.overflow = 'hidden';
+};
