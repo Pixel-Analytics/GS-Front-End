@@ -34,3 +34,14 @@ const showQuestion = () =>{
        finishQuiz();
     }
 }
+
+const optionClickEvent = (e) =>{
+    let clikedOption = parseInt(e.target.getAttribute('data-op'));
+
+    if(questions[currentQuestion].answer === clikedOption){
+        correctAnswers++;        
+    }
+
+    currentQuestion++;
+    showQuestion();
+}
