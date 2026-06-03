@@ -44,3 +44,52 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeMenu();
 });
 
+/* SLIDER */
+const sliderEl      = document.querySelector('.slider');
+const sliderWidth   = document.querySelector('.slider--width');
+const sliderItems   = document.querySelectorAll('.slider--item');
+const totalSlides   = sliderItems.length;
+let currentSlide    = 0;
+let autoSlide;
+
+
+const getSlideWidth = () => sliderEl.clientWidth;
+
+const initSlider = () => {
+    const w = getSlideWidth();
+    sliderWidth.style.width = `${w * totalSlides}px`;
+    sliderItems.forEach(item => item.style.width = `${w}px`);
+    updateMargin();
+};
+
+const updateMargin = () => {
+    const w = getSlideWidth();
+    sliderWidth.style.marginLeft = `-${currentSlide * w}px`;
+};
+
+const goPrev = () => {
+    currentSlide = currentSlide <= 0 ? totalSlides - 1 : currentSlide - 1;
+    updateMargin();
+    resetAutoSlide();
+};
+
+const goNext = () => {
+    currentSlide = currentSlide >= totalSlides - 1 ? 0 : currentSlide + 1;
+    updateMargin();
+    resetAutoSlide();
+};
+
+const resetAutoSlide = () => {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(goNext, 4000);
+};
+
+initSlider();
+autoSlide = setInterval(goNext, 4000);
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initSlider, 150);
+});
+
