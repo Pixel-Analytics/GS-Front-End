@@ -14,3 +14,8 @@ document.getElementById('theme-light').addEventListener('click', () => {
     body.classList.remove('theme-reader');
     body.classList.add('theme-light');
 });
+
+/* HAMBURGER MENU */
+const hamburger = document.getElementById('hamburger');
+const navMenu   = document.getElementById('nav-menu');
+const overlay   = document.getElementById('nav-overlay');
