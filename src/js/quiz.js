@@ -45,3 +45,36 @@ const optionClickEvent = (e) =>{
     currentQuestion++;
     showQuestion();
 }
+
+const finishQuiz = () =>{
+
+    let points = Math.floor((correctAnswers / questions.length) * 100);
+
+    if(points < 30){
+        document.querySelector('.scoreText1').innerHTML = 'Tente melhorar...';
+        document.querySelector('.scorePct').style.color = '#FF0000';
+    } else if(points >= 30 && points < 70){
+        document.querySelector('.scoreText1').innerHTML = 'Muito bom!';
+        document.querySelector('.scorePct').style.color = '#FFFF00';
+    } else if (points >= 70){
+        document.querySelector('.scoreText1').innerHTML = 'Parabéns!';
+        document.querySelector('.scorePct').style.color = '#0D630D';
+    }
+
+    document.querySelector('.scorePct').innerHTML = `Acertou ${points}%`
+    document.querySelector('.scoreText2').innerHTML = `Você respondeu ${questions.length} questões e acertou ${correctAnswers}.`;
+
+    document.querySelector('.scoreArea').style.display = 'block';
+    document.querySelector('.questionArea').style.display = 'none';
+    document.querySelector('.progress--bar').style.width = `100%`;
+}
+
+const resetEvent = () =>{
+    correctAnswers = 0;
+    currentQuestion = 0;
+    showQuestion();
+}
+
+document.querySelector('.scoreArea button').addEventListener('click', resetEvent);
+
+showQuestion();
