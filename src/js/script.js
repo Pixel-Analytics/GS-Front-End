@@ -44,3 +44,10 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeMenu();
 });
 
+/* SLIDER */
+const sliderEl      = document.querySelector('.slider');
+const sliderWidth   = document.querySelector('.slider--width');
+const sliderItems   = document.querySelectorAll('.slider--item');
+const totalSlides   = sliderItems.length;
+let currentSlide    = 0;
+let autoSlide;
