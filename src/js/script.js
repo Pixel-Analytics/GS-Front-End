@@ -27,3 +27,19 @@ const openMenu = () => {
     hamburger.setAttribute('aria-expanded', 'true');
     document.body.style.overflow = 'hidden';
 };
+const closeMenu = () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('open');
+    overlay.classList.remove('active');
+    hamburger.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+};
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.contains('active') ? closeMenu() : openMenu();
+});
+
+/* Close menu on Escape key */
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+});
