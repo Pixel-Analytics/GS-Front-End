@@ -66,3 +66,30 @@ const updateMargin = () => {
     const w = getSlideWidth();
     sliderWidth.style.marginLeft = `-${currentSlide * w}px`;
 };
+
+const goPrev = () => {
+    currentSlide = currentSlide <= 0 ? totalSlides - 1 : currentSlide - 1;
+    updateMargin();
+    resetAutoSlide();
+};
+
+const goNext = () => {
+    currentSlide = currentSlide >= totalSlides - 1 ? 0 : currentSlide + 1;
+    updateMargin();
+    resetAutoSlide();
+};
+
+const resetAutoSlide = () => {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(goNext, 4000);
+};
+
+initSlider();
+autoSlide = setInterval(goNext, 4000);
+
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(initSlider, 150);
+});
+
