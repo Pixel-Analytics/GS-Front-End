@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <title>OrbitSafe</title>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            <img src="./src/assets/logo.png" alt="logo">
+            <h2><strong>Orbit</strong>Safe</h2>
+        </div>
+
+        <!-- HAMBURGER BUTTON -->
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#" onclick="closeMenu()">Home</a></li>
+                <li><a href="#tecnologia" onclick="closeMenu()">Stack</a></li>
+                <li><a href="#mapa" onclick="closeMenu()">Mapa</a></li>
+                <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+            </ul>
+            <div class="themes">
+                <button id="theme-dark" class="btn-theme"></button>
+                <button id="theme-reader" class="btn-theme"></button>
+                <button id="theme-light" class="btn-theme"></button>
+            </div>
+        </nav>
+
+        <!-- Overlay for mobile menu -->
+        <div class="nav-overlay" id="nav-overlay" onclick="closeMenu()"></div>
+
+    </header>
+
+    <main>
+        <!-- SECTION: HERO -->
+        <section class="hero">
+
+            <div class="text-hero">
+                <h1>Monitoramento <br> inteligente de <br>
+                <span id="queimadas">Queimadas</span> e 
+                <span id="enchentes">Enchentes</span></h1>
+
+                <p>Plataforma que combina dados de satélites da NASA/INPE com
+                     sensores locais para proteger vidas, cidades e o meio ambiente
+                      através de alertas inteligentes em tempo real</p>
+                
+                <div class="btns">
+                    <a href="#tecnologia" class="btn-1">Conhecer o Projeto</a>
+                    <a href="#contato" class="btn-2">Entrar em Contato</a>
+                </div>
+                
+            </div>
+
+            <div class="slider">
+
+                <div class="slider--controls">
+
+                    <div class="slider--control" onclick="goPrev()">
+                        &#8249;
+                    </div>
+
+                    <div class="slider--control" onclick="goNext()">
+                        &#8250;
+                    </div>
+
+                </div>
+
+                <div class="slider--width">
+
+                    <div class="slider--item">
+                        <img 
+                            src="./src/assets/img1.jpg" 
+                            alt="Monitoramento de queimadas"
+                        >
+                    </div>
+
+                    <div class="slider--item">
+                        <img 
+                            src="./src/assets/img2.jpg" 
+                            alt="Monitoramento de enchentes"
+                        >
+                    </div>
+
+                    <div class="slider--item">
+                        <img 
+                            src="./src/assets/img3.jpg" 
+                            alt="Tecnologia de monitoramento ambiental"
+                        >
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- SECTION: PROBLEMA -->
+        <section class="problema">
+
+            <h2 class="titulo">O Problema</h2>
+            <p class="subtitulo">Qual problema a solução pretende resolver</p>
+
+            <div class="text-problema">
+                <p>Queimadas e enchentes têm causado grandes impactos ambientais, sociais e econômicos em diversas regiões do Brasil. Muitas vezes, a falta de monitoramento em tempo real e de alertas rápidos dificulta a prevenção e aumenta os danos para cidades, agricultores e moradores de áreas de risco. O OrbitSafe surge para utilizar tecnologia espacial e sensores inteligentes na identificação antecipada desses desastres, permitindo ações mais rápidas e eficientes.</p>
+            </div>
+
+        </section>
+
+        <!-- SECTION: TECNOLOGIA -->
+         <section class="tecnologia" id="tecnologia">
+
+            <h2 class="titulo">Tecnologia</h2>
+            <p class="subtitulo">Tecnologias utilizadas na solução</p>
+
+            <div class="container">
+                <div class="card">
+                    <img src="./src/assets/icon1.png" alt="icon 1">
+                    <h2 class="titulo-card">Dados Satélite</h2>
+                    <p class="texto-card">NASA / INPE</p>
+                </div>
+
+                <div class="card">
+                    <img src="./src/assets/icon2.png" alt="icon 2">
+                    <h2 class="titulo-card">Sensores Locais</h2>
+                    <p class="texto-card">Temperatura / Umidade</p>
+                </div>
+
+                <div class="card">
+                    <img src="./src/assets/icon3.png" alt="icon 3">
+                    <h2 class="titulo-card">Plataforma Web</h2>
+                    <p class="texto-card">Interface Intuitiva</p>
+                </div>
+
+                <div class="card">
+                    <img src="./src/assets/icon4.png" alt="icon 4">
+                    <h2 class="titulo-card">Alertas Inteligentes</h2>
+                    <p class="texto-card">Notificação em Tempo Real</p>
+                </div>
+            </div>
+
+            <div class="text-tecnologia">
+                <p>O OrbitSafe utiliza dados satelitais de instituições como NASA e INPE, integrados a sensores locais, para monitorar condições ambientais em tempo real.
+
+O principal diferencial da plataforma é o **Índice de Risco OrbitSafe (IRO)**, um indicador de 0 a 100 que calcula a probabilidade de ocorrência de queimadas e enchentes em uma determinada região.
+
+O IRO é gerado a partir da análise de fatores como temperatura, umidade, histórico climático, dados orbitais e informações coletadas pelos sensores locais. Com base nesse índice, o sistema classifica o nível de risco e gera alertas automáticos para apoiar a tomada de decisões preventivas.
+
+Dessa forma, a tecnologia permite identificar situações de perigo com antecedência, contribuindo para a proteção da população, do meio ambiente e do patrimônio.
+</p>    
+            </div>
+         </section>    
+        
+        <!-- SECTION: OBJETIVO -->
+         <section class="objetivo">
+
+            <h2 class="titulo">Objetivos</h2>
+            <p class="subtitulo">Principais objetivos do projeto</p>
+
+            <div class="text-objetivo">
+                <p>O principal objetivo do OrbitSafe é auxiliar na prevenção de queimadas e enchentes através do monitoramento contínuo e da emissão de alertas antecipados. O projeto busca reduzir impactos ambientais, proteger comunidades em áreas vulneráveis, apoiar órgãos responsáveis no gerenciamento de riscos e oferecer informações confiáveis para agricultores e gestores públicos.</p>
+            </div>
+
+        </section>
+
+        <!-- SECTION: PUBLICO-ALVO -->
+         <section class="publico-alvo">
+
+            <h2 class="titulo">Público-Alvo</h2>
+            <p class="subtitulo">Pessoas e grupos impactados pela solução</p>
+
+            <div class="container">
+                <div class="card">
+                    <img src="./src/assets/icon5.png" alt="icon 5">
+                    <h2 class="titulo-card">Cidades</h2>
+                    <p class="texto-card">Gestão municipal e planejamento urbano</p>
+                </div>
+
+                <div class="card">
+                    <img src="./src/assets/icon6.png" alt="icon 6">
+                    <h2 class="titulo-card">Defesa Civil</h2>
+                    <p class="texto-card">Respostas rápidas e emergenciais</p>
+                </div>
+
+                <div class="card">
+                    <img src="./src/assets/icon7.png" alt="icon 7">
+                    <h2 class="titulo-card">Agricultores</h2>
+                    <p class="texto-card">Proteção de lavouras e propriedades</p>
+                </div>
+
+                <div class="card">
+                    <img src="./src/assets/icon8.png" alt="icon 8">
+                    <h2 class="titulo-card">Moradores</h2>
+                    <p class="texto-card">Segurança em áreas de risco</p>
+                </div>
+            </div>
+
+            <div class="text-publico-alvo">
+                <p>A solução atende diferentes grupos afetados por desastres naturais: prefeituras e gestores públicos, defesa civil, agricultores, moradores de áreas de risco e empresas do setor ambiental, todos beneficiados por alertas precisos e dados confiáveis.</p>
+            </div>
+
+        </section>
+
+        <!-- SECTION: BENEFICIOS -->
+        <section class="beneficios">
+
+            <h2 class="titulo">Benefícios</h2>
+            <p class="subtitulo">Principais vantagens da solução</p>
+
+            <div class="container-beneficios">
+
+                <div class="card-beneficio">
+                    <img src="./src/assets/icon1.png" alt="beneficio 1">
+                    <div>
+                        <h2 class="titulo-card">Monitoramento em Tempo Real</h2>
+                        <p class="texto-card">Dados atualizados continuamente</p>
+                    </div>
+                </div>
+
+                <div class="card-beneficio">
+                    <img src="./src/assets/icon2.png" alt="beneficio 2">
+                    <div>
+                        <h2 class="titulo-card">Alertas Antecipados</h2>
+                        <p class="texto-card">Notificações antes dos desastres</p>
+                    </div>
+                </div>
+
+                <div class="card-beneficio">
+                    <img src="./src/assets/icon3.png" alt="beneficio 3">
+                    <div>
+                        <h2 class="titulo-card">Cobertura Nacional</h2>
+                        <p class="texto-card">Todo o território brasileiro monitorado</p>
+                    </div>
+                </div>
+
+                <div class="card-beneficio">
+                    <img src="./src/assets/icon4.png" alt="beneficio 4">
+                    <div>
+                        <h2 class="titulo-card">Integração com a Defesa Civil</h2>
+                        <p class="texto-card">Resposta coordenada e eficiente</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-beneficios">
+                <p>A solução foi desenvolvida para atender diferentes grupos impactados por desastres naturais. Entre os principais públicos estão prefeituras, defesa civil, agricultores, moradores de áreas de risco, empresas do setor ambiental e instituições responsáveis pelo monitoramento climático e territorial.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: COTIDIANO -->
+        <section class="cotidiano">
+            <h2 class="titulo">Aplicação no Cotidiano</h2>
+            <p class="subtitulo">Como a solução ajuda os usuários na prática</p>
+
+            <div class="container-cotidiano">
+
+                <div class="card-cotidiano">
+                    <div class="icon-cotidiano">1</div>
+                    <div class="cotidiano-content">
+                        <h2 class="titulo-card">Coleta de Dados</h2>
+                        <p class="texto-card">Satélites e sensores coletam informações em tempo real</p>
+                    </div>
+                </div>
+
+                <div class="card-cotidiano">
+                    <div class="icon-cotidiano">2</div>
+                    <div class="cotidiano-content">
+                        <h2 class="titulo-card">Análise Inteligente</h2>
+                        <p class="texto-card">Algoritmos processam e identificam riscos potenciais</p>
+                    </div>
+                </div>
+
+                <div class="card-cotidiano">
+                    <div class="icon-cotidiano">3</div>
+                    <div class="cotidiano-content">
+                        <h2 class="titulo-card">Emissão de Alertas</h2>
+                        <p class="texto-card">Notificações enviadas para autoridades e população</p>
+                    </div>
+                </div>
+
+                <div class="card-cotidiano">
+                    <div class="icon-cotidiano">4</div>
+                    <div class="cotidiano-content">
+                        <h2 class="titulo-card">Ação Preventiva</h2>
+                        <p class="texto-card">Medidas são tomadas antes do desastre acontecer</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-cotidiano">
+                <p>Na prática, o sistema poderá alertar moradores sobre riscos de enchentes antes que o problema aconteça, permitindo evacuações mais rápidas e seguras. Agricultores poderão acompanhar condições climáticas e riscos de queimadas em suas plantações, enquanto órgãos públicos terão acesso a mapas e dados atualizados para agir de forma preventiva.</p>
+            </div>
+        </section>
+
+        <!-- SECTION: MAPA -->
+        <section class="mapa" id="mapa">
+            <h2 class="titulo">Mapa de Riscos no Brasil</h2>
+            <p class="subtitulo">Regiões mais afetadas por incêndios e enchentes</p>
+            <div class="container">
+
+                <div class="card-mapa">
+                    <h2 class="titulo-card">Incêndios Florestais</h2>
+
+                    <div class="img-mapa">
+                        <img src="./src/assets/mapa1.png" alt="mapa 1">
+                    </div>
+                    
+                    <div class="legenda-mapa">
+                        <h2 class="titulo-card">Regiões mais afetadas</h2>
+
+                        <div class="legenda-indice">
+                            <div class="legenda-icon-1"></div>
+                            <p class="texto-card">Muito Afetada</p>
+                        </div>
+
+                        <div class="legenda-indice">
+                            <div class="legenda-icon-2"></div>
+                            <p class="texto-card">Afetada</p>
+                        </div>
+
+                        <div class="legenda-indice">
+                            <div class="legenda-icon-3"></div>
+                            <p class="texto-card">Pouco Afetada</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card-mapa">
+                    <h2 class="titulo-card">Enchentes e Alagamentos</h2>
+
+                    <div class="img-mapa">
+                        <img src="./src/assets/mapa2.png" alt="mapa 2">
+                    </div>
+                    
+                    <div class="legenda-mapa">
+                        <h2 class="titulo-card">Regiões mais afetadas</h2>
+
+                        <div class="legenda-indice">
+                            <div class="legenda-icon-1"></div>
+                            <p class="texto-card">Muito Afetada</p>
+                        </div>
+
+                        <div class="legenda-indice">
+                            <div class="legenda-icon-2"></div>
+                            <p class="texto-card">Afetada</p>
+                        </div>
+
+                        <div class="legenda-indice">
+                            <div class="legenda-icon-3"></div>
+                            <p class="texto-card">Pouco Afetada</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <!-- SECTION: CONTATO -->
+        <section class="contato" id="contato">
+            <h2 class="titulo">Contato e Quiz</h2>
+            <p>Entre em contato conosco e teste seus conhecimentos</p>
+
+            <form action="">
+
+                <div class="area-contato">
+                    <h2 class="titulo-card">Entre em contato</h2>
+
+                    <div class="input">
+                        <h3>Nome Completo</h3>
+                        <input type="text" placeholder="Digite o seu Nome Completo" required>
+                    </div>
+
+                    <div class="input">
+                        <h3>E-mail</h3>
+                        <input type="email" placeholder="Digite o seu E-mail" required>
+                    </div>
+
+                    <div class="input">
+                        <h3>Telefone</h3>
+                        <input type="tel" placeholder="Digite o seu Número de Telefone" required>
+                    </div>
+
+                    <div class="input">
+                        <h3>Selecione sua Região</h3>
+                        <select required>
+                            <option value="">Selecione</option>
+                            <option value="Norte">Norte</option>
+                            <option value="Nordeste">Nordeste</option>
+                            <option value="Centro-Oeste">Centro-Oeste</option>
+                            <option value="Sudeste">Sudeste</option>
+                            <option value="Sul">Sul</option>
+                        </select>
+                    </div>
+                    <button class="btn-2" type="submit">Enviar</button>
+                </div>
+            </form>
+            
+            <h2 class="titulo" style="margin-top: 60px;">Realize o nosso Quiz</h2>
+            <p class="subtitulo">Teste o seu conhecimento. Clique no botão abaixo!</p>
+
+            <a href="" class="btn-1">QUIZ</a>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">
+            <img src="./src/assets/logo.png" alt="logo">
+            <h2><strong>Orbit</strong>Safe</h2>
+        </div>
+        <p class="footer-credits">Renan Bonanno - RM573043 | Murillo Dourado - RM571912 | Gabriel Tardelli - RM569751 | André Cano - RM570429 | Leonardo Hidifira - RM569519</p>
+    </footer>
+
+    <script src="./src/js/script.js"></script>
+</body>
+</html>
