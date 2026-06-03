@@ -51,3 +51,18 @@ const sliderItems   = document.querySelectorAll('.slider--item');
 const totalSlides   = sliderItems.length;
 let currentSlide    = 0;
 let autoSlide;
+
+
+const getSlideWidth = () => sliderEl.clientWidth;
+
+const initSlider = () => {
+    const w = getSlideWidth();
+    sliderWidth.style.width = `${w * totalSlides}px`;
+    sliderItems.forEach(item => item.style.width = `${w}px`);
+    updateMargin();
+};
+
+const updateMargin = () => {
+    const w = getSlideWidth();
+    sliderWidth.style.marginLeft = `-${currentSlide * w}px`;
+};
